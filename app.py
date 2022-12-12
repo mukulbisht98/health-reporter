@@ -54,6 +54,8 @@ def resultc():
         file = request.files['file']
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
+            if not os.path.isdir(app.config['UPLOAD_FOLDER']):
+                os.makedirs(app.config['UPLOAD_FOLDER'])
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             flash('Image successfully uploaded and displayed below')
             img = cv2.imread('static/uploads/'+filename)
@@ -88,6 +90,10 @@ def resultd():
         age = float(request.form['age'])
         skinthickness = float(request.form['skin'])
         pred = diabetes_model.predict([[pregnancies, glucose, bloodpressure,skinthickness, insulin, bmi, diabetespedigree, age]])
+        if pred < 0.5:
+            pred = 0
+        else:
+            pred = 1
         return render_template('resultd.html', fn=firstname, ln=lastname, age=age, r=pred, gender=gender)
 
 
