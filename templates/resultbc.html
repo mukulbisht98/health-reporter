@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<style type='text/css'>
+    .form-group {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+</style>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>PyCoders Health Reporter</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="static/assets/img/favicon.png" rel="icon">
+    <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <div class="logo">
+                <h1 class="text-light"><a href="/"><span>PyCoders Health Reporter</span></a></h1>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="/">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/covid">Covid-19 Test</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/breastcancer">Breast Cancer Test</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/diabetes">Diabetes Test</a>
+                    </li>
+                    <li><a class="nav-link scrollto" href="/#about">About Us</a></li>
+                </ul>
+
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+
+    <main id="main">
+        <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>Breast Cancer Detection</h2>
+                    <p>Here are the Results</p>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-lg-5 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="info">
+                            <div class="section-title">
+                                <h1>
+                                    Breast Cancer Detection
+                                </h1>
+                            </div>
+                            <p>We are using Random Forest Algorithm for Prediction.</p>
+                            <p>The accuracy achieved was around 94.15%.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="info">
+                            <div class='main-form'>
+                                <div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="static/bcp.png"
+                                                style='width:250px;height:250px;margin-top: 30px;margin-bottom:30px;'>
+                                        </div>
+
+                                        <div class="col"
+                                            style='margin-top: 30px;margin-bottom:30px; border-radius: 5px;'>
+                                            <p>
+                                            <h6 style="display:inline">First Name: </h6>{{fn}}
+                                            </p>
+                                            <p>
+                                            <h6 style="display:inline">Last Name: </h6>{{ln}}
+                                            </p>
+                                            <p>
+                                            <h6 style="display:inline">Age: </h6>{{age}}
+                                            </p>
+                                            <p>
+                                            <h6 style="display:inline">Gender: </h6>{{gender}}
+                                            </p>
+
+                                            {% if r==1 %}
+                                            <div>
+                                                <p>
+                                                <h6 style="display:inline">Result: </h6>MALIGNANT
+                                                </p>
+                                            </div>
+
+
+                                            {% else %}
+                                            <div>
+                                                <p>
+                                                <h6 style="display:inline">Result: </h6>BENIGN
+                                                </p>
+                                            </div>
+                                            {% endif %}
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-9 col-md-6 footer-contact">
+                        <h3>PyCoders Health Reporter</h3>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/covid">Covid-19 Test</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/breastcancer">Breast Cancer Test</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/diabetes">Diabetes Test</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="copyright">
+                <strong><span>AML 2203_1 - Advanced Python AI and ML Tools - PROJECT</span></strong>
+            </div>
+            <div class="credits">
+                Made by PyCoders Team
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="static/assets/vendor/aos/aos.js"></script>
+    <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="static/assets/js/main.js"></script>
+</body>
+
+</html>
