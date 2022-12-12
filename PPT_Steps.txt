@@ -1,0 +1,11 @@
+1. intro + objective
+2. UI main + 3 separate UI
+3. Disease1: (Dataset-features, records, source) + Snapshot(Code-Database) + (Confusion matrix)
+4. Disease1: (UI output-screeshot)+ ( Algo 1/ Algo 2- results (matrix)
+5. Disease2: (Dataset-features, records, source) + Snapshot(Code-Database) + (Confusion matrix/feature scaling/parameter tuning/ performance parameter)	
+6. Disease2: (UI output-screeshot)+ ( Algo 1/ Algo 2- results (matrix)
+7. Disease3: (Dataset-features, records, source) + Snapshot(Code-Database) + (Confusion matrix)
+8. Disease3: (UI output-screeshot)+ ( Algo 1/ Algo 2- results (matrix)
+9. Conclusion( Model performance- D1/ D2/ D3) + (data-challenges) 
+10. Future Work (Extended use case) + (SCope enhancement) + (Learning)
+11. Team members responsibility  data source+ data wrangling+ data cleaning+ model algorithm + parameter tuning.
